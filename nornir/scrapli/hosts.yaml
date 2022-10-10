@@ -1,0 +1,44 @@
+---
+
+cart-colo:
+    hostname: "192.168.86.46"
+    connection_options:
+      scrapli:
+        extras:
+          auth_secondary: "0mab3tVm,"
+    groups:
+        - arista
+        - cart
+
+ny5-feed-sw2:
+    hostname: "192.168.86.47"
+    groups:
+        - arista
+        - ny5
+
+ny5-feed-sw3:
+    hostname: "192.168.86.48"
+    groups:
+        - arista
+        - ny5
+    data:
+      ntp_server1: "8.8.8.8 prefer"
+      ntp_server2: "10.24.7.15" 
+
+ny5-feed-sw1b:
+    hostname: "192.168.86.50"
+    groups:
+        - arista
+        - ny5
+
+ny5-feed-sw1a:
+    hostname: "192.168.86.51"
+    groups:
+        - arista
+        - ny5
+
+telx-colo:
+    hostname: "192.168.86.43"
+    groups:
+        - arista
+        - telx 

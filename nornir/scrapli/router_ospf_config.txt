@@ -1,0 +1,7 @@
+
+ip routing
+router ospf 15
+
+int et1 - 12 
+description configured by nornir_scrapli
+shut

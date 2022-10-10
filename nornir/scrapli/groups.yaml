@@ -1,0 +1,22 @@
+---
+
+arista:
+  platform: eos
+  username: "arista"
+  password: "arista"
+  
+
+ny5:
+  data:
+      ntp_server1: "10.15.51.15 prefer"
+      ntp_server2: "10.24.7.15" 
+   
+cart:
+  data:
+      ntp_server1: "10.15.51.15 prefer"
+      ntp_server2: "10.24.7.15" 
+
+telx:
+    data:
+        ntp_server1: "10.24.7.15 prefer"
+        ntp_server2: "10.32.1.15"

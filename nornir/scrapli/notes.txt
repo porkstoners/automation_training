@@ -1,0 +1,11 @@
+What is Nornir: Automation framework for network device
+ - Handles concurrency \ concurrent connections
+ - Inventory management \ Inheritance 
+ - Agentless - nothing required on the target network device
+ - purely python based \ flexible \ leverage existing python code  
+ - Extensible - works in tandem with [Napalm \ Scrapli \ Netmiko] 
+  # If you use napalm vs nornir-napaplm - you have concurrency and inheritance 
+ - similar to Ansible files are written in yaml but Ansible requires playbook (logic you use to pull the data)
+   - Playbooks are written in yaml which is not a proper programming language 
+ - Nornir - Faster \ more flexible \ Improved error handling 
+
