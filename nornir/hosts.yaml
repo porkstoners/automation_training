@@ -1,7 +1,7 @@
 ---
 
 cart-colo:
-    hostname: "192.168.86.46"
+    hostname: "192.168.86.200"
     connection_options:
       scrapli:
         extras:
@@ -11,13 +11,13 @@ cart-colo:
         - cart
 
 ny5-feed-sw2:
-    hostname: "192.168.86.47"
+    hostname: "192.168.86.201"
     groups:
         - arista
         - ny5
 
 ny5-feed-sw3:
-    hostname: "192.168.86.48"
+    hostname: "192.168.86.202"
     groups:
         - arista
         - ny5
@@ -26,19 +26,19 @@ ny5-feed-sw3:
       ntp_server2: "10.24.7.15" 
 
 ny5-feed-sw1b:
-    hostname: "192.168.86.50"
+    hostname: "192.168.86.203"
     groups:
         - arista
         - ny5
 
 ny5-feed-sw1a:
-    hostname: "192.168.86.51"
+    hostname: "192.168.86.204"
     groups:
         - arista
         - ny5
 
 telx-colo:
-    hostname: "192.168.86.43"
+    hostname: "192.168.86.205"
     groups:
         - arista
         - telx 
