@@ -9,4 +9,3 @@ def another_show_command_test(task):
 
 results = nr.run(task=another_show_command_test)
 print_result(results)
-
