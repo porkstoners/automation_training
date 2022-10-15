@@ -562,3 +562,30 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed
 
 
 2022-10-14 15:09:29,009 -  nornir.core -     INFO -        run() - Running task 'another_show_command_test' with args {} on 6 hosts
+2022-10-14 15:54:32,744 -  nornir.core -     INFO -        run() - Running task 'another_show_command_test' with args {} on 6 hosts
+2022-10-14 16:02:20,411 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 6 hosts
+2022-10-14 16:02:56,519 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 6 hosts
+2022-10-14 16:03:06,341 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 6 hosts
+2022-10-14 21:22:14,112 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts
+2022-10-14 21:22:14,112 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:22:14,113 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:22:14,113 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:22:14,114 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:22:14,115 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:22:14,116 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:28:00,787 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts
+2022-10-14 21:28:00,787 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:28:00,788 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:28:00,789 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:28:00,791 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:28:00,792 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:28:00,802 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config.txt'} on 6 hosts
+2022-10-14 21:29:16,050 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts
+2022-10-14 21:29:16,051 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
+2022-10-14 21:29:16,051 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
+2022-10-14 21:29:16,053 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
+2022-10-14 21:29:16,055 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
+2022-10-14 21:29:16,065 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
+2022-10-14 21:29:16,066 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
+2022-10-14 21:31:17,086 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 6 hosts
+2022-10-14 21:32:21,242 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts
