@@ -4,3 +4,5 @@ ip multicast-routing
 router ospf 15
 auto-cost reference-bandwidth 100000
 
+management api http-commands
+no shutdown 

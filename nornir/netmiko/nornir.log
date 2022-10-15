@@ -589,3 +589,321 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed
 2022-10-14 21:29:16,066 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': '/opt/Training/python/automation_training/nornir/netmiko/config.txt'} on 6 hosts
 2022-10-14 21:31:17,086 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 6 hosts
 2022-10-14 21:32:21,242 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts
+2022-10-14 21:45:46,718 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:45:46,732 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:45:46,733 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:45:46,733 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:45:46,733 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:45:46,734 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_config_file.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:45:46,734 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:45:46,734 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_config_file.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:45:46,735 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_config_file.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:45:46,735 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_config_file.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:45:46,735 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_config_file.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:46:02,354 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts
+2022-10-14 21:47:20,258 -  nornir.core -     INFO -        run() - Running task 'send_more_commands' with args {} on 6 hosts

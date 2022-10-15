@@ -1,0 +1,1500 @@
+2022-10-14 21:43:13,799 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:43:13,817 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:43:13,818 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:43:13,818 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:43:13,819 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:43:13,819 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:43:13,820 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:43:13,820 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:43:13,820 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:43:13,820 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:43:13,821 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:46:17,458 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:46:17,467 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:46:17,469 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:46:17,469 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:46:17,469 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:46:17,470 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:46:17,470 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:46:17,471 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:46:17,471 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 440, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 219, in open
+    sh_ver = self.device.run_commands(["show version"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/pyeapi_syntax_wrapper.py", line 42, in run_commands
+    return super(Node, self).run_commands(commands, *args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/client.py", line 771, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 554, in execute
+    response = self.send(request)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/pyeapi/eapilib.py", line 483, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 229, in open
+    raise ConnectionException(str(ce))
+napalm.base.exceptions.ConnectionException: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2022-10-14 21:46:17,472 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:46:17,472 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_config")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:47:31,595 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:47:59,397 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:48:35,223 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:48:59,433 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:49:22,192 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:49:22,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 125, in str_to_int
+    return _struct.unpack('>I', _inet_pton(AF_INET, addr))[0]
+OSError: illegal IP address string passed to inet_pton
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 311, in __init__
+    self._value = self._module.str_to_int(addr, flags)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 129, in str_to_int
+    raise AddrFormatError('%r is not a valid IPv4 address string!' % (addr,))
+netaddr.core.AddrFormatError: '' is not a valid IPv4 address string!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 799, in parse_ip_network
+    ip = IPAddress(val1, module.version, flags=INET_PTON)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 313, in __init__
+    raise AddrFormatError('base address %r is not IPv%d'
+netaddr.core.AddrFormatError: base address '' is not IPv4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 265, in expand_partial_address
+    tokens = ['%d' % int(addr)]
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 942, in __init__
+    value, prefixlen = parse_ip_network(module, addr,
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 803, in parse_ip_network
+    expanded_addr = _ipv4.expand_partial_address(val1)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 267, in expand_partial_address
+    raise error
+netaddr.core.AddrFormatError: invalid partial IPv4 address: ''!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 1426, in get_route_to
+    if IPNetwork(destination).version == 6:
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 953, in __init__
+    raise AddrFormatError('invalid IPNetwork %s' % (addr,))
+netaddr.core.AddrFormatError: invalid IPNetwork 
+
+2022-10-14 21:49:22,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 125, in str_to_int
+    return _struct.unpack('>I', _inet_pton(AF_INET, addr))[0]
+OSError: illegal IP address string passed to inet_pton
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 311, in __init__
+    self._value = self._module.str_to_int(addr, flags)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 129, in str_to_int
+    raise AddrFormatError('%r is not a valid IPv4 address string!' % (addr,))
+netaddr.core.AddrFormatError: '' is not a valid IPv4 address string!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 799, in parse_ip_network
+    ip = IPAddress(val1, module.version, flags=INET_PTON)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 313, in __init__
+    raise AddrFormatError('base address %r is not IPv%d'
+netaddr.core.AddrFormatError: base address '' is not IPv4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 265, in expand_partial_address
+    tokens = ['%d' % int(addr)]
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 942, in __init__
+    value, prefixlen = parse_ip_network(module, addr,
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 803, in parse_ip_network
+    expanded_addr = _ipv4.expand_partial_address(val1)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 267, in expand_partial_address
+    raise error
+netaddr.core.AddrFormatError: invalid partial IPv4 address: ''!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 1426, in get_route_to
+    if IPNetwork(destination).version == 6:
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 953, in __init__
+    raise AddrFormatError('invalid IPNetwork %s' % (addr,))
+netaddr.core.AddrFormatError: invalid IPNetwork 
+
+2022-10-14 21:49:22,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:22,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:22,341 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 125, in str_to_int
+    return _struct.unpack('>I', _inet_pton(AF_INET, addr))[0]
+OSError: illegal IP address string passed to inet_pton
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 311, in __init__
+    self._value = self._module.str_to_int(addr, flags)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 129, in str_to_int
+    raise AddrFormatError('%r is not a valid IPv4 address string!' % (addr,))
+netaddr.core.AddrFormatError: '' is not a valid IPv4 address string!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 799, in parse_ip_network
+    ip = IPAddress(val1, module.version, flags=INET_PTON)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 313, in __init__
+    raise AddrFormatError('base address %r is not IPv%d'
+netaddr.core.AddrFormatError: base address '' is not IPv4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 265, in expand_partial_address
+    tokens = ['%d' % int(addr)]
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 942, in __init__
+    value, prefixlen = parse_ip_network(module, addr,
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 803, in parse_ip_network
+    expanded_addr = _ipv4.expand_partial_address(val1)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 267, in expand_partial_address
+    raise error
+netaddr.core.AddrFormatError: invalid partial IPv4 address: ''!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 1426, in get_route_to
+    if IPNetwork(destination).version == 6:
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 953, in __init__
+    raise AddrFormatError('invalid IPNetwork %s' % (addr,))
+netaddr.core.AddrFormatError: invalid IPNetwork 
+
+2022-10-14 21:49:22,341 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:22,348 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 125, in str_to_int
+    return _struct.unpack('>I', _inet_pton(AF_INET, addr))[0]
+OSError: illegal IP address string passed to inet_pton
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 311, in __init__
+    self._value = self._module.str_to_int(addr, flags)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 129, in str_to_int
+    raise AddrFormatError('%r is not a valid IPv4 address string!' % (addr,))
+netaddr.core.AddrFormatError: '' is not a valid IPv4 address string!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 799, in parse_ip_network
+    ip = IPAddress(val1, module.version, flags=INET_PTON)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 313, in __init__
+    raise AddrFormatError('base address %r is not IPv%d'
+netaddr.core.AddrFormatError: base address '' is not IPv4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 265, in expand_partial_address
+    tokens = ['%d' % int(addr)]
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 942, in __init__
+    value, prefixlen = parse_ip_network(module, addr,
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 803, in parse_ip_network
+    expanded_addr = _ipv4.expand_partial_address(val1)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 267, in expand_partial_address
+    raise error
+netaddr.core.AddrFormatError: invalid partial IPv4 address: ''!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 1426, in get_route_to
+    if IPNetwork(destination).version == 6:
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 953, in __init__
+    raise AddrFormatError('invalid IPNetwork %s' % (addr,))
+netaddr.core.AddrFormatError: invalid IPNetwork 
+
+2022-10-14 21:49:22,348 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:22,359 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 125, in str_to_int
+    return _struct.unpack('>I', _inet_pton(AF_INET, addr))[0]
+OSError: illegal IP address string passed to inet_pton
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 311, in __init__
+    self._value = self._module.str_to_int(addr, flags)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 129, in str_to_int
+    raise AddrFormatError('%r is not a valid IPv4 address string!' % (addr,))
+netaddr.core.AddrFormatError: '' is not a valid IPv4 address string!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 799, in parse_ip_network
+    ip = IPAddress(val1, module.version, flags=INET_PTON)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 313, in __init__
+    raise AddrFormatError('base address %r is not IPv%d'
+netaddr.core.AddrFormatError: base address '' is not IPv4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 265, in expand_partial_address
+    tokens = ['%d' % int(addr)]
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 942, in __init__
+    value, prefixlen = parse_ip_network(module, addr,
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 803, in parse_ip_network
+    expanded_addr = _ipv4.expand_partial_address(val1)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 267, in expand_partial_address
+    raise error
+netaddr.core.AddrFormatError: invalid partial IPv4 address: ''!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 1426, in get_route_to
+    if IPNetwork(destination).version == 6:
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 953, in __init__
+    raise AddrFormatError('invalid IPNetwork %s' % (addr,))
+netaddr.core.AddrFormatError: invalid IPNetwork 
+
+2022-10-14 21:49:22,359 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:22,362 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 125, in str_to_int
+    return _struct.unpack('>I', _inet_pton(AF_INET, addr))[0]
+OSError: illegal IP address string passed to inet_pton
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 311, in __init__
+    self._value = self._module.str_to_int(addr, flags)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 129, in str_to_int
+    raise AddrFormatError('%r is not a valid IPv4 address string!' % (addr,))
+netaddr.core.AddrFormatError: '' is not a valid IPv4 address string!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 799, in parse_ip_network
+    ip = IPAddress(val1, module.version, flags=INET_PTON)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 313, in __init__
+    raise AddrFormatError('base address %r is not IPv%d'
+netaddr.core.AddrFormatError: base address '' is not IPv4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 265, in expand_partial_address
+    tokens = ['%d' % int(addr)]
+ValueError: invalid literal for int() with base 10: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 942, in __init__
+    value, prefixlen = parse_ip_network(module, addr,
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 803, in parse_ip_network
+    expanded_addr = _ipv4.expand_partial_address(val1)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/strategy/ipv4.py", line 267, in expand_partial_address
+    raise error
+netaddr.core.AddrFormatError: invalid partial IPv4 address: ''!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/napalm/eos/eos.py", line 1426, in get_route_to
+    if IPNetwork(destination).version == 6:
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/netaddr/ip/__init__.py", line 953, in __init__
+    raise AddrFormatError('invalid IPNetwork %s' % (addr,))
+netaddr.core.AddrFormatError: invalid IPNetwork 
+
+2022-10-14 21:49:22,362 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:50,042 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:49:50,114 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping 8.8.8.8'
+
+2022-10-14 21:49:50,115 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping 8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:50,122 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping 8.8.8.8'
+
+2022-10-14 21:49:50,123 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping 8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:50,140 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping 8.8.8.8'
+
+2022-10-14 21:49:50,140 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping 8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:50,145 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping 8.8.8.8'
+
+2022-10-14 21:49:50,145 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping 8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:50,149 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping 8.8.8.8'
+
+2022-10-14 21:49:50,149 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping 8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:49:50,159 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping 8.8.8.8'
+
+2022-10-14 21:49:50,159 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping 8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:50:41,204 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:50:41,271 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:50:41,272 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:50:41,272 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:50:41,272 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:50:41,272 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters=["ping"] + ["8.8.8.8"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:50:41,273 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters=["ping"] + ["8.8.8.8"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:50:41,273 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters=["ping"] + ["8.8.8.8"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:50:41,273 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters=["ping"] + ["8.8.8.8"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:50:41,281 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:50:41,281 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters=["ping"] + ["8.8.8.8"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:50:41,294 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:50:41,294 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters=["ping"] + ["8.8.8.8"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:51:04,436 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:51:25,059 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:52:23,860 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:52:23,924 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:52:23,924 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:52:23,927 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:52:23,927 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:52:23,931 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:52:23,932 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:52:23,936 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:52:23,936 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:52:23,941 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:52:23,941 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:52:23,979 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_ping'
+
+2022-10-14 21:52:23,979 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="ping")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:53:42,104 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:54:08,483 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:54:08,552 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_is_alive'
+
+2022-10-14 21:54:08,552 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="is_alive")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:54:08,556 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_is_alive'
+
+2022-10-14 21:54:08,556 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="is_alive")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:54:08,559 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_is_alive'
+
+2022-10-14 21:54:08,559 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="is_alive")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:54:08,561 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_is_alive'
+
+2022-10-14 21:54:08,561 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="is_alive")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:54:08,570 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_is_alive'
+
+2022-10-14 21:54:08,570 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="is_alive")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:54:08,572 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_is_alive'
+
+2022-10-14 21:54:08,572 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_arp.py", line 8, in get_running_config
+    task.run(task=napalm_get, getters="is_alive")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-14 21:54:59,967 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:59:03,781 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 21:59:11,094 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-14 22:02:14,695 -  nornir.core -     INFO -        run() - Running task 'ping_a_host' with args {} on 6 hosts
