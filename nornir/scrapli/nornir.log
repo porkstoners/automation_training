@@ -1,0 +1,828 @@
+2022-10-18 13:15:05,244 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-18 13:15:05,493 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:15:05,493 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:15:05,497 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:15:05,497 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:15:05,516 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:15:05,516 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:15:05,552 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:15:05,553 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:15:05,566 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:15:05,566 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:15:05,583 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:15:05,584 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:22:30,354 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-18 13:22:30,561 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:22:30,562 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:22:30,567 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:22:30,568 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:22:30,573 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:22:30,574 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:22:30,577 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:22:30,577 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:22:30,578 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:22:30,578 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:22:30,587 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:22:30,587 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:25:21,026 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-18 13:25:21,224 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:25:21,224 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:25:22,320 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:25:22,337 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:25:22,364 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:25:22,375 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:25:22,384 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:28:06,767 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-18 13:28:06,977 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:28:06,978 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:28:08,203 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:28:08,239 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:28:08,239 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:28:08,239 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:28:08,251 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:32:54,284 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-18 13:32:54,501 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:32:54,502 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:32:55,676 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:32:55,736 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:32:55,750 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:32:55,750 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:32:55,762 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:33:00,827 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-18 13:33:01,045 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-10-18 13:33:01,045 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'update_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_configs_file.py", line 8, in update_ospf
+    task.run(task=send_configs_from_file, file="router_ospf_config.txt")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-10-18 13:37:55,999 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts

@@ -1,7 +1,13 @@
+username netops privilege 15 role bkupuser secret 0 netops
 
-ip routing
-router ospf 15
-
-int et1 - 12 
-description configured by nornir_scrapli
-shut
+role bkupuser 
+permit command copy running-config
+permit command show running-config
+permit command terminal
+permit command show version
+permit command show hostname
+permit command bash timeout 5 cat /mnt/flash/boot-config
+permit command show configuration sessions
+permit command scp
+deny command .*
+   

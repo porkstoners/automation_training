@@ -1498,3 +1498,568 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
 2022-10-14 21:59:03,781 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
 2022-10-14 21:59:11,094 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
 2022-10-14 22:02:14,695 -  nornir.core -     INFO -        run() - Running task 'ping_a_host' with args {} on 6 hosts
+2022-10-18 12:50:50,594 -  nornir.core -     INFO -        run() - Running task 'ping_a_host' with args {} on 6 hosts
+2022-10-18 12:54:07,675 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-18 12:58:24,540 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-18 12:58:24,541 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2022-10-18 12:58:24,541 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2022-10-18 12:58:24,542 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2022-10-18 12:58:24,543 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, get_route_to="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:24,543 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2022-10-18 12:58:24,543 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, get_route_to="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:24,543 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, get_route_to="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:24,543 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2022-10-18 12:58:24,544 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: napalm_get() missing 1 required positional argument: 'getters'
+
+2022-10-18 12:58:24,544 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, get_route_to="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:24,544 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, get_route_to="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:24,544 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, get_route_to="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:48,274 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-18 12:58:48,349 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dest'
+
+2022-10-18 12:58:48,349 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dest'
+
+2022-10-18 12:58:48,350 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dest'
+
+2022-10-18 12:58:48,350 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dest="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:48,350 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dest="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:48,351 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dest="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:48,359 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dest'
+
+2022-10-18 12:58:48,359 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dest="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:48,363 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dest'
+
+2022-10-18 12:58:48,363 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dest'
+
+2022-10-18 12:58:48,364 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dest="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:58:48,364 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dest="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:05,267 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-18 12:59:05,326 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_arp'
+
+2022-10-18 12:59:05,326 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_arp")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:05,331 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_arp'
+
+2022-10-18 12:59:05,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_arp")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:05,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_arp'
+
+2022-10-18 12:59:05,332 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_arp")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:05,366 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_arp'
+
+2022-10-18 12:59:05,366 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_arp")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:05,367 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_arp'
+
+2022-10-18 12:59:05,367 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_arp")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:05,379 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_arp'
+
+2022-10-18 12:59:05,380 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_arp")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:20,323 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-18 12:59:20,379 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dst'
+
+2022-10-18 12:59:20,379 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dst="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:20,387 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dst'
+
+2022-10-18 12:59:20,387 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dst="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:20,396 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dst'
+
+2022-10-18 12:59:20,397 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dst="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:20,424 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dst'
+
+2022-10-18 12:59:20,424 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dst="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:20,426 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dst'
+
+2022-10-18 12:59:20,426 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dst="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:20,443 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+TypeError: get_route_to() got an unexpected keyword argument 'dst'
+
+2022-10-18 12:59:20,444 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to", dst="8.8.8.8")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:47,539 -  nornir.core -     INFO -        run() - Running task 'get_running_config' with args {} on 6 hosts
+2022-10-18 12:59:47,612 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_route_to(8.8.8.8)'
+
+2022-10-18 12:59:47,612 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_route_to(8.8.8.8)'
+
+2022-10-18 12:59:47,612 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_route_to(8.8.8.8)'
+
+2022-10-18 12:59:47,613 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_route_to(8.8.8.8)'
+
+2022-10-18 12:59:47,613 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_route_to(8.8.8.8)'
+
+2022-10-18 12:59:47,613 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to(8.8.8.8)")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:47,613 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to(8.8.8.8)")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:47,614 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to(8.8.8.8)")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:47,614 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to(8.8.8.8)")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:47,614 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to(8.8.8.8)")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-10-18 12:59:47,622 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'EOSDriver' object has no attribute 'get_route_to(8.8.8.8)'
+
+2022-10-18 12:59:47,622 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'get_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "get_ntp_stats.py", line 14, in get_running_config
+    task.run(task=napalm_get, getters="get_route_to(8.8.8.8)")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+

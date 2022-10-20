@@ -2,10 +2,6 @@
 
 cart-colo:
     hostname: "192.168.86.200"
-    connection_options:
-      scrapli:
-        extras:
-          auth_secondary: "0mab3tVm,"
     groups:
         - arista
         - cart
@@ -24,6 +20,7 @@ ny5-feed-sw3:
     data:
       ntp_server1: "8.8.8.8 prefer"
       ntp_server2: "10.24.7.15" 
+      auth_strict_key: "False"
 
 ny5-feed-sw1b:
     hostname: "192.168.86.203"

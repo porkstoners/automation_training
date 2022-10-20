@@ -4,6 +4,11 @@ arista:
   platform: eos
   username: "arista"
   password: "arista"
+  connection_options:
+        scrapli:
+            extras:
+                auth_strict_key: False
+                transport: system
   
 
 ny5:
