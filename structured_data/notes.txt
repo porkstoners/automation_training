@@ -1,0 +1,22 @@
+ There are three different types of struct
+  
+  - YAML 
+    - Structured Data 
+    - Human readable 
+  
+  - NETCONF
+    - Uses XML 
+    - XML is very powerful - advanced filtering abilities 
+    - Not very readable 
+
+  - JSON
+    - Structured Data
+    - Human readable 
+    - popular 
+
+- Why is structured data useful 
+ - Allows us to easily to transform them into python Dictionaries
+ - This is important because it means we dont have to scan large blobs of text and scan for specific content. 
+ - It allows us to programtically access the data and return data accurately 
+
+ 

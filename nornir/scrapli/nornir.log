@@ -826,3 +826,1296 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (fail
 
 
 2022-10-18 13:37:55,999 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-19 21:19:46,296 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:19:46,297 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:46,297 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:46,298 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:46,298 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:46,299 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:46,299 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:46,299 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:46,300 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:46,300 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:46,300 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:46,300 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:46,300 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:58,200 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:19:58,201 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:58,201 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:58,202 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:58,202 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:58,203 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:58,203 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:58,203 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:58,204 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:58,204 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'nornir_scrapli.tasks.core.send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: 'module' object is not callable
+
+2022-10-19 21:19:58,205 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:58,205 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:19:58,205 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: nornir_scrapli.tasks.core.send_interactive (failed)
+
+
+2022-10-19 21:21:34,244 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:21:34,245 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:21:34,245 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:21:34,245 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:21:34,245 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:21:34,246 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:21:34,246 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:21:34,246 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:21:34,247 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:21:34,247 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:21:34,247 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:21:34,248 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:21:34,248 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:04,318 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:22:04,318 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:22:04,319 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:22:04,319 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:22:04,320 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:22:04,321 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:22:04,321 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:04,321 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:04,321 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:04,321 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: send_interactive() got an unexpected keyword argument 'interactive_events'
+
+2022-10-19 21:22:04,322 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:04,322 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:04,322 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interactive_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:22:30,687 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:23:01,992 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:23:01,992 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:23:01,996 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:23:01,996 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:23:02,007 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:23:02,008 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:23:02,055 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:23:02,055 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:23:02,055 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:23:02,056 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:23:02,112 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:23:02,113 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:23:49,867 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:24:52,359 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:27:27,347 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:27:58,643 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:27:58,643 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:27:58,647 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:27:58,647 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:27:58,661 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:27:58,661 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:27:58,664 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:27:58,665 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:27:58,665 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:27:58,665 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:27:58,683 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_interactive' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_interactive.py", line 80, in send_interactive
+    scrapli_response = scrapli_conn.send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 440, in send_interactive
+    response: Response = super().send_interactive(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 297, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 438, in send_interactive
+    raw_response, processed_response = self.channel.send_inputs_interact(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 108, in _multiprocessing_timeout
+    return _handle_timeout(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 134, in _handle_timeout
+    raise ScrapliTimeout(message)
+scrapli.exceptions.ScrapliTimeout: timed out sending interactive input to device
+
+2022-10-19 21:27:58,683 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'commit_flash' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_rollback.py", line 9, in commit_flash
+    task.run(task=send_interactive, interact_events=cmds)
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_interactive (failed)
+
+
+2022-10-19 21:31:19,708 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:31:36,852 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:32:04,244 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 6 hosts
+2022-10-19 21:32:33,888 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:32:54,263 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:32:55,333 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["dir | grep ipvzer"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:32:55,365 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["dir | grep ipvzer"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:32:55,366 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["dir | grep ipvzer"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:32:55,373 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["dir | grep ipvzer"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:32:55,390 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["dir | grep ipvzer"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:32:55,505 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["dir | grep ipvzer"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:34:16,280 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:39:04,778 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:39:27,585 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:39:42,964 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:40:53,484 -  nornir.core -     INFO -        run() - Running task 'update_ospf' with args {} on 6 hosts
+2022-10-19 21:41:24,434 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:41:25,597 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:25,612 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:25,612 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:25,627 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:25,628 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:25,647 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:33,815 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:41:34,946 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp-servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:34,946 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp-servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:34,962 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp-servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:34,978 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp-servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:34,986 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp-servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:34,987 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'show_command_list' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "send_commands.py", line 8, in show_command_list
+    task.run(task=send_commands, commands=["show ntp-servers"])
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands (failed)
+
+
+2022-10-19 21:41:52,700 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts
+2022-10-19 21:49:49,268 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 6 hosts
+2022-10-19 21:49:49,271 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-19 21:49:49,271 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-19 21:49:49,271 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-19 21:49:49,272 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-19 21:49:49,272 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-19 21:49:49,272 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 10:05:45,865 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 6 hosts
+2022-10-20 10:05:45,867 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 10:05:45,868 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 10:05:45,868 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 10:05:45,869 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 10:05:45,869 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 10:05:45,869 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:15,183 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 6 hosts
+2022-10-20 11:19:15,185 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:15,186 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:15,186 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:15,186 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:15,187 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:15,187 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero force")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:50,165 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 6 hosts
+2022-10-20 11:19:50,168 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:50,169 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:50,169 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:50,169 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:50,169 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:19:50,170 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'rollin_rollin_rollin' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "config_load_from_flash.py", line 9, in rollin_rollin_rollin
+    task.run(task==send_command, command="configure replace flash:ipvzero")
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/Training/python/automation_training/venv/lib/python3.8/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'bool' object has no attribute '__name__'
+
+2022-10-20 11:22:12,244 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 6 hosts
+2022-10-20 11:22:20,146 -  nornir.core -     INFO -        run() - Running task 'show_command_list' with args {} on 6 hosts

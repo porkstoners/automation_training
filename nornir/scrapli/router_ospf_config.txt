@@ -11,3 +11,4 @@ permit command show configuration sessions
 permit command scp
 deny command .*
    
+ 

@@ -1,0 +1,43 @@
+---
+
+
+
+arista:
+  platform: eos
+  #username: "arista"
+  #password: "arista"
+  connection_options:
+    scrapli:
+      port: 22
+      extras:
+        auth_strict_key: False
+        transport: system
+        genie_platform: eos
+
+ny5:
+  data:
+      ntp_server1: "10.15.51.15 prefer"
+      ntp_server2: "10.24.7.15" 
+   
+cart:
+  data:
+      ntp_server1: "10.15.51.15 prefer"
+      ntp_server2: "10.24.7.15" 
+
+telx:
+    data:
+        ntp_server1: "10.24.7.15 prefer"
+        n tp_server2: "10.32.1.15"
+
+north: {}
+    #username: aristanorth
+    #password: aristanorth
+
+south: {}
+    #username: aristasouth
+    #password: aristasouth
+
+basement:
+    username: cisco
+    password: cisco 
+
