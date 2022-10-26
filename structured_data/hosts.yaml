@@ -45,8 +45,10 @@ telx-colo:
     groups:
         - arista
         - telx 
+
 cisco-sw1:
-    hostname: "192.168.1.200"
-    #password: "aristaseven"
+    hostname: "sandbox-iosxe-recomm-1.cisco.com"
+    username: "developer"
+    password: "C1sco12345"
     groups:
-        - basement 
+        - cisco_dev_net 

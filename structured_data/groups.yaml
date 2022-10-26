@@ -3,7 +3,7 @@
 
 
 arista:
-  platform: eos
+  #platform: eos
   #username: "arista"
   #password: "arista"
   connection_options:
@@ -11,7 +11,7 @@ arista:
       port: 22
       extras:
         auth_strict_key: False
-        transport: system
+        transport: ssh2
         genie_platform: eos
 
 ny5:
@@ -37,7 +37,7 @@ south: {}
     #username: aristasouth
     #password: aristasouth
 
-basement:
-    username: cisco
-    password: cisco 
+cisco_dev_net: {}
+
+
 

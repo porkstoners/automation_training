@@ -628,3 +628,2264 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
 
 
 2022-10-24 17:01:43,948 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 13:26:00,400 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 13:26:01,703 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:01,766 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:01,802 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:01,823 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:01,823 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:01,824 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:15,516 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-10-25 13:26:15,516 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:36,889 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 6 hosts
+2022-10-25 13:26:38,030 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:38,034 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:38,034 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:38,036 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:38,050 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:38,050 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:26:55,108 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 6 hosts
+2022-10-25 13:27:31,806 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 6 hosts
+2022-10-25 13:27:59,492 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 6 hosts
+2022-10-25 13:27:59,512 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 518, in _load_core_transport_plugin
+    transport_plugin_module = importlib.import_module(
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/transport/plugins/ssh2/transport.py", line 6, in <module>
+    from ssh2.channel import Channel
+ModuleNotFoundError: No module named 'ssh2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection = Scrapli(**parameters, platform=final_platform)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/factory.py", line 506, in __new__
+    final_conn = final_driver(**final_kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/core/arista_eos/sync_driver.py", line 130, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 48, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 185, in __init__
+    transport_class, self._plugin_transport_args = self._transport_factory()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 460, in _transport_factory
+    transport_class, _plugin_transport_args_class = self._load_core_transport_plugin()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 531, in _load_core_transport_plugin
+    raise ScrapliTransportPluginError(exception_message) from exc
+scrapli.exceptions.ScrapliTransportPluginError: 
+
+************************************************************************************************************************** Transport Plugin Extra Not Installed! ***************************************************************************************************************************
+                               Optional transport plugin 'ssh2' is not installed!
+To resolve this issue, install the transport plugin. You can do this in one of the following ways:
+1: 'pip install -r requirements-ssh2.txt'
+2: 'pip install scrapli[ssh2]'                               
+********************************************************************************************************************************************************************************************************************************************************************************************
+
+
+2022-10-25 13:27:59,512 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 518, in _load_core_transport_plugin
+    transport_plugin_module = importlib.import_module(
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/transport/plugins/ssh2/transport.py", line 6, in <module>
+    from ssh2.channel import Channel
+ModuleNotFoundError: No module named 'ssh2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection = Scrapli(**parameters, platform=final_platform)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/factory.py", line 506, in __new__
+    final_conn = final_driver(**final_kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/core/arista_eos/sync_driver.py", line 130, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 48, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 185, in __init__
+    transport_class, self._plugin_transport_args = self._transport_factory()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 460, in _transport_factory
+    transport_class, _plugin_transport_args_class = self._load_core_transport_plugin()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 531, in _load_core_transport_plugin
+    raise ScrapliTransportPluginError(exception_message) from exc
+scrapli.exceptions.ScrapliTransportPluginError: 
+
+************************************************************************************************************************** Transport Plugin Extra Not Installed! ***************************************************************************************************************************
+                               Optional transport plugin 'ssh2' is not installed!
+To resolve this issue, install the transport plugin. You can do this in one of the following ways:
+1: 'pip install -r requirements-ssh2.txt'
+2: 'pip install scrapli[ssh2]'                               
+********************************************************************************************************************************************************************************************************************************************************************************************
+
+
+2022-10-25 13:27:59,512 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 518, in _load_core_transport_plugin
+    transport_plugin_module = importlib.import_module(
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/transport/plugins/ssh2/transport.py", line 6, in <module>
+    from ssh2.channel import Channel
+ModuleNotFoundError: No module named 'ssh2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection = Scrapli(**parameters, platform=final_platform)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/factory.py", line 506, in __new__
+    final_conn = final_driver(**final_kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/core/arista_eos/sync_driver.py", line 130, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 48, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 185, in __init__
+    transport_class, self._plugin_transport_args = self._transport_factory()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 460, in _transport_factory
+    transport_class, _plugin_transport_args_class = self._load_core_transport_plugin()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 531, in _load_core_transport_plugin
+    raise ScrapliTransportPluginError(exception_message) from exc
+scrapli.exceptions.ScrapliTransportPluginError: 
+
+************************************************************************************************************************** Transport Plugin Extra Not Installed! ***************************************************************************************************************************
+                               Optional transport plugin 'ssh2' is not installed!
+To resolve this issue, install the transport plugin. You can do this in one of the following ways:
+1: 'pip install -r requirements-ssh2.txt'
+2: 'pip install scrapli[ssh2]'                               
+********************************************************************************************************************************************************************************************************************************************************************************************
+
+
+2022-10-25 13:27:59,512 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 518, in _load_core_transport_plugin
+    transport_plugin_module = importlib.import_module(
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/transport/plugins/ssh2/transport.py", line 6, in <module>
+    from ssh2.channel import Channel
+ModuleNotFoundError: No module named 'ssh2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection = Scrapli(**parameters, platform=final_platform)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/factory.py", line 506, in __new__
+    final_conn = final_driver(**final_kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/core/arista_eos/sync_driver.py", line 130, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 48, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 185, in __init__
+    transport_class, self._plugin_transport_args = self._transport_factory()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 460, in _transport_factory
+    transport_class, _plugin_transport_args_class = self._load_core_transport_plugin()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 531, in _load_core_transport_plugin
+    raise ScrapliTransportPluginError(exception_message) from exc
+scrapli.exceptions.ScrapliTransportPluginError: 
+
+************************************************************************************************************************** Transport Plugin Extra Not Installed! ***************************************************************************************************************************
+                               Optional transport plugin 'ssh2' is not installed!
+To resolve this issue, install the transport plugin. You can do this in one of the following ways:
+1: 'pip install -r requirements-ssh2.txt'
+2: 'pip install scrapli[ssh2]'                               
+********************************************************************************************************************************************************************************************************************************************************************************************
+
+
+2022-10-25 13:27:59,513 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 518, in _load_core_transport_plugin
+    transport_plugin_module = importlib.import_module(
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/transport/plugins/ssh2/transport.py", line 6, in <module>
+    from ssh2.channel import Channel
+ModuleNotFoundError: No module named 'ssh2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection = Scrapli(**parameters, platform=final_platform)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/factory.py", line 506, in __new__
+    final_conn = final_driver(**final_kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/core/arista_eos/sync_driver.py", line 130, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 48, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 185, in __init__
+    transport_class, self._plugin_transport_args = self._transport_factory()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 460, in _transport_factory
+    transport_class, _plugin_transport_args_class = self._load_core_transport_plugin()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 531, in _load_core_transport_plugin
+    raise ScrapliTransportPluginError(exception_message) from exc
+scrapli.exceptions.ScrapliTransportPluginError: 
+
+************************************************************************************************************************** Transport Plugin Extra Not Installed! ***************************************************************************************************************************
+                               Optional transport plugin 'ssh2' is not installed!
+To resolve this issue, install the transport plugin. You can do this in one of the following ways:
+1: 'pip install -r requirements-ssh2.txt'
+2: 'pip install scrapli[ssh2]'                               
+********************************************************************************************************************************************************************************************************************************************************************************************
+
+
+2022-10-25 13:27:59,513 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 518, in _load_core_transport_plugin
+    transport_plugin_module = importlib.import_module(
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/transport/plugins/ssh2/transport.py", line 6, in <module>
+    from ssh2.channel import Channel
+ModuleNotFoundError: No module named 'ssh2'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection = Scrapli(**parameters, platform=final_platform)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/factory.py", line 506, in __new__
+    final_conn = final_driver(**final_kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/core/arista_eos/sync_driver.py", line 130, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 48, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/generic/sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 185, in __init__
+    transport_class, self._plugin_transport_args = self._transport_factory()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 460, in _transport_factory
+    transport_class, _plugin_transport_args_class = self._load_core_transport_plugin()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/base_driver.py", line 531, in _load_core_transport_plugin
+    raise ScrapliTransportPluginError(exception_message) from exc
+scrapli.exceptions.ScrapliTransportPluginError: 
+
+************************************************************************************************************************** Transport Plugin Extra Not Installed! ***************************************************************************************************************************
+                               Optional transport plugin 'ssh2' is not installed!
+To resolve this issue, install the transport plugin. You can do this in one of the following ways:
+1: 'pip install -r requirements-ssh2.txt'
+2: 'pip install scrapli[ssh2]'                               
+********************************************************************************************************************************************************************************************************************************************************************************************
+
+
+2022-10-25 13:27:59,513 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip int brief")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:27:59,513 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip int brief")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:27:59,513 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip int brief")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:27:59,514 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip int brief")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:27:59,514 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip int brief")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:27:59,514 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip int brief")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:28:15,249 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 6 hosts
+2022-10-25 13:42:27,918 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 13:43:27,015 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 13:46:27,116 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 13:46:31,075 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:48:12,564 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 13:48:16,547 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:48:27,413 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 13:48:31,437 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 13:49:26,370 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 13:49:45,544 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:21:40,082 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:22:38,971 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:22:54,063 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:24:44,439 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:24:48,419 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show mac address-table")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 14:25:05,606 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:25:09,438 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show mac address table")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 14:25:17,662 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:25:21,500 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show mac addr")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 14:26:35,143 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:26:39,027 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show mac address-table")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 14:27:09,555 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:27:09,969 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:27:38,084 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:27:38,519 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:28:25,639 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 1 hosts
+2022-10-25 14:28:26,059 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:28:53,765 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 14:28:54,203 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:28:57,688 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:49:52,405 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 14:49:52,822 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:49:56,348 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:50:14,752 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 14:50:15,227 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 14:50:17,674 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 287, in channel_authenticate_ssh
+    buf = self.read()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 69, in read
+    buf = self.transport.read()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 105, in _multiprocessing_timeout
+    future = pool.submit(wrapped_func, *args, **kwargs)
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 181, in submit
+    raise RuntimeError('cannot schedule new futures after '
+RuntimeError: cannot schedule new futures after interpreter shutdown
+
+2022-10-25 14:50:17,674 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show version")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 15:03:02,047 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:03:02,649 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 15:03:05,930 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.text()
+AttributeError: 'Response' object has no attribute 'text'
+
+2022-10-25 15:08:55,435 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:08:55,980 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.textfsm_parse_output()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 255, in __getattr__
+    return getattr(self[0], name)
+AttributeError: 'ScrapliResult' object has no attribute 'textfsm_parse_output'
+
+2022-10-25 15:08:59,265 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 11, in pull_structured_data
+    task.host["facts"] = version_result.textfsm_parse_output()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 255, in __getattr__
+    return getattr(self[0], name)
+AttributeError: 'ScrapliResult' object has no attribute 'textfsm_parse_output'
+
+2022-10-25 15:09:53,932 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:10:09,635 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:10:31,286 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:11:08,118 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:11:17,644 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:11:18,196 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 15:11:21,646 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip interfaces")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 15:11:30,882 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:11:34,767 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show interface status")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 15:11:46,658 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:12:20,817 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:12:24,772 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show interface status")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 15:17:42,026 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:17:46,000 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 10, in pull_structured_data
+    version_result = task.run(task=send_command, command="show interface status")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 15:23:00,697 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:29:58,606 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:31:27,061 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:33:35,785 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:33:36,463 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 12, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.textfsm_parse_output(indent = 2)
+TypeError: textfsm_parse_output() got an unexpected keyword argument 'indent'
+
+2022-10-25 15:33:39,650 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 12, in pull_structured_data
+    task.host["facts"] = version_result.scrapli_response.textfsm_parse_output(indent = 2)
+TypeError: textfsm_parse_output() got an unexpected keyword argument 'indent'
+
+2022-10-25 15:34:27,569 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 2 hosts
+2022-10-25 15:36:52,745 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:36:53,859 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:36:53,859 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:36:53,859 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:36:53,860 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:36:53,860 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:36:53,914 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:36:56,597 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:09,315 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:37:10,429 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:10,430 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:10,430 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:10,431 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:10,431 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:10,431 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:37:13,266 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"][2]["protocol_status"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:28,247 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:38:29,216 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:29,271 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:29,281 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:29,368 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:29,411 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:29,442 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:32,166 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["cart-colo"]["facts"]
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'cart-colo'
+
+2022-10-25 15:38:46,574 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:39:03,575 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:40:06,686 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:40:10,600 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 15, in pull_structured_data
+    print(task.host["facts"][2]['bia'])
+IndexError: list index out of range
+
+2022-10-25 15:40:48,722 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:40:52,564 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_status = task.host["facts"][2]["bia"]
+IndexError: list index out of range
+
+2022-10-25 15:42:47,565 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:42:48,576 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:42:48,576 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:42:48,622 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:42:48,678 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:42:48,693 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:42:48,758 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:42:51,542 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"]["1"]
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 15:43:41,128 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:43:44,949 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][2]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:43:56,040 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:44:00,010 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:44:22,976 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:44:26,864 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:44:54,783 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:44:55,746 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+KeyError: 0
+
+2022-10-25 15:44:55,747 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+KeyError: 0
+
+2022-10-25 15:44:55,752 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+KeyError: 0
+
+2022-10-25 15:44:55,784 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+KeyError: 0
+
+2022-10-25 15:44:55,801 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+KeyError: 0
+
+2022-10-25 15:44:55,835 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+KeyError: 0
+
+2022-10-25 15:44:58,682 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][0]
+IndexError: list index out of range
+
+2022-10-25 15:45:04,800 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:45:05,810 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+KeyError: 1
+
+2022-10-25 15:45:05,811 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+KeyError: 1
+
+2022-10-25 15:45:05,824 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+KeyError: 1
+
+2022-10-25 15:45:05,833 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+KeyError: 1
+
+2022-10-25 15:45:05,852 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+KeyError: 1
+
+2022-10-25 15:45:05,898 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+KeyError: 1
+
+2022-10-25 15:45:08,745 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0][1]
+IndexError: list index out of range
+
+2022-10-25 15:45:20,671 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:45:24,539 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:45:34,144 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:45:38,141 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 13, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:49:42,663 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:49:46,664 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:52:41,424 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:52:45,277 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:52:50,913 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:52:54,897 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:53:27,601 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:53:31,644 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:54:07,412 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:54:11,279 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:54:49,628 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:54:53,530 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:57:07,267 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:57:11,236 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:57:41,059 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:57:44,925 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:58:02,510 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:58:06,528 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 15:58:37,187 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 15:58:41,114 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:01:57,303 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:01:58,458 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:01:58,458 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:01:58,460 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:01:58,460 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:01:58,460 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:01:58,485 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:01,468 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:13,425 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:02:14,484 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:14,484 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:14,507 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:14,510 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:14,526 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:14,592 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:17,564 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 21, in pull_structured_data
+    task.host["version"] = version_result_two.scrapli_response.texfsm_parse_output()
+AttributeError: 'Response' object has no attribute 'texfsm_parse_output'
+
+2022-10-25 16:02:47,344 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:02:51,237 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:03:41,751 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:03:45,598 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:04:31,950 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:04:35,864 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:05:01,359 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:05:05,221 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:05:11,761 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:05:15,766 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:07:31,849 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:07:32,943 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:07:32,944 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:07:32,944 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:07:32,944 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:07:32,944 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:07:33,022 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:07:35,691 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][::]['interface']
+TypeError: list indices must be integers or slices, not str
+
+2022-10-25 16:12:37,435 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:12:41,457 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:14:25,878 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:14:29,769 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:15:33,566 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:15:37,553 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:15:44,700 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:15:48,596 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:17:41,183 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:17:45,161 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:27,821 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:18:28,819 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:28,820 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:28,821 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:28,822 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:28,822 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:28,981 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:31,721 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:39,686 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:18:43,607 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:18:47,272 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:18:51,297 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:19:19,941 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:19:23,938 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:23:55,658 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:23:56,542 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:23:56,542 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:23:56,542 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:23:56,577 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:23:56,584 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:23:56,610 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:23:59,587 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:25:43,395 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:25:47,417 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:25:57,030 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:26:01,034 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script2.py", line 20, in pull_structured_data
+    interface_name = task.host["facts"][0]['interface']
+IndexError: list index out of range
+
+2022-10-25 16:30:54,680 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:30:55,586 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:30:55,588 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:30:55,638 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:30:55,645 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:30:55,645 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:30:55,729 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:30:58,563 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:53,441 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:31:54,337 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:54,345 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:54,355 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:54,355 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:54,359 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1a': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:54,401 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:31:57,399 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show ip nterface")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-10-25 16:34:01,515 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:34:36,337 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:41:12,992 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:46:19,312 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:46:20,297 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:46:20,297 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:46:20,297 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:47:31,921 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:47:33,004 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:47:33,005 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:47:33,005 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:47:33,006 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:47:33,027 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:47:56,577 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:47:57,616 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:48:10,683 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:48:32,337 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:48:33,360 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:48:43,017 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-25 16:48:43,854 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:48:43,899 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-25 16:48:43,970 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw2': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-26 11:56:36,647 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 7 hosts
+2022-10-26 11:56:37,632 - nornir.core.task -    ERROR -      start() - Host 'telx-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-26 11:56:37,633 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw3': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-26 11:56:37,636 - nornir.core.task -    ERROR -      start() - Host 'cart-colo': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-26 11:56:37,678 - nornir.core.task -    ERROR -      start() - Host 'ny5-feed-sw1b': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 20, in pull_structured_data
+    sw_version = nr.inventory.hosts['ny5-feed-sw1a']['facts'][0]['image']
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'facts'
+
+2022-10-26 11:56:44,101 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 302, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2022-10-26 11:56:44,102 - nornir.core.task -    ERROR -      start() - Host 'cisco-sw1': task 'pull_structured_data' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "script5.py", line 18, in pull_structured_data
+    version_result = task.run(task=send_command, command="show version")
+  File "/opt/Training/python/automation_training/structured_data/venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
