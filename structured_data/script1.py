@@ -8,7 +8,7 @@ from nornir_scrapli.functions import print_structured_result
 nr = InitNornir(config_file="config.yaml")
 
 def pull_structured_data(task):
-    task.run(task=send_command, command="show version ")
+    task.run(task=send_command, command="show version")
 
     
 
