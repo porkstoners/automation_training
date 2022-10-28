@@ -1,0 +1,494 @@
+##################################
+## spine1 ##
+##################################
+
+
+conf t
+
+hostname a-spine1
+
+int ma1
+ip addr 192.168.86.200
+
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.101.201.201/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.102.201.201/24
+interface Ethernet3
+   no switchport
+   mtu 9214
+   ip address 10.103.201.201/24
+interface Ethernet4
+   no switchport
+   mtu 9214
+   ip address 10.104.201.201/24
+interface Ethernet5
+   no switchport
+   mtu 9214
+   ip address 10.105.201.201/24
+interface Ethernet6
+   no switchport
+   mtu 9214
+   ip address 10.106.201.201/24
+interface Ethernet7
+   no switchport
+   mtu 9214
+   ip address 10.107.201.201/24
+
+
+interface Loopback0
+   ip address 1.1.1.201/32
+
+
+router bgp 65001
+ router-id 1.1.1.201
+ update wait-install
+ no bgp default ipv4-unicast
+ bgp listen range 10.0.0.0/8 peer-group IPv4-UNDERLAY-PEERS peer-filter LEAF-AS-RANGE
+ neighbor IPv4-UNDERLAY-PEERS peer-group
+ neighbor IPv4-UNDERLAY-PEERS password @rista123
+ neighbor IPv4-UNDERLAY-PEERS send-community
+ neighbor IPv4-UNDERLAY-PEERS maximum-routes 12000
+ redistribute connected route-map RM-CONN-2-BGP
+ !
+ address-family ipv4
+ neighbor IPv4-UNDERLAY-PEERS activate
+
+
+
+
+
+
+##################################
+## spine2   ##
+##################################
+
+
+
+hostname a-spine2
+
+int ma1
+ip addr 192.168.86.201
+
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.101.202.202/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.102.202.202/24
+interface Ethernet3
+   no switchport
+   mtu 9214
+   ip address 10.103.202.202/24
+interface Ethernet4
+   no switchport
+   mtu 9214
+   ip address 10.104.202.202/24
+interface Ethernet5
+   no switchport
+   mtu 9214
+   ip address 10.105.202.202/24
+interface Ethernet6
+   no switchport
+   mtu 9214
+   ip address 10.106.202.202/24
+interface Ethernet7
+   no switchport
+   mtu 9214
+   ip address 10.107.202.202/24
+
+interface Loopback0
+   ip address 1.1.1.202/32
+
+router bgp 65001
+   router-id 10.0.1.2
+
+##################################
+## a-leaf1-a ##
+##################################
+
+
+
+hostname a-leaf1-a
+
+int ma1
+ip addr 192.168.86.202
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.101.201.101/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.101.202.101/24
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.101/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 10.100.2.1/32
+
+
+
+router bgp 65102
+ router-id 1.1.1.101
+ update wait-install
+ no bgp default ipv4-unicast
+
+ maximum-paths 2
+ neighbor IPv4-UNDERLAY-PEERS peer-group
+ neighbor IPv4-UNDERLAY-PEERS remote-as 65001
+ neighbor IPv4-UNDERLAY-PEERS password @rista123
+ neighbor IPv4-UNDERLAY-PEERS send-community
+ neighbor IPv4-UNDERLAY-PEERS maximum-routes 12000
+ neighbor MLAG-IPv4-UNDERLAY-PEER peer-group
+ neighbor MLAG-IPv4-UNDERLAY-PEER remote-as 65102
+ neighbor MLAG-IPv4-UNDERLAY-PEER next-hop-self
+ neighbor MLAG-IPv4-UNDERLAY-PEER password @rista123
+ neighbor MLAG-IPv4-UNDERLAY-PEER send-community
+ neighbor MLAG-IPv4-UNDERLAY-PEER maximum-routes 12000
+ neighbor 192.0.0.2 peer-group MLAG-IPv4-UNDERLAY-PEER
+ neighbor 10.102.201.201 peer-group IPv4-UNDERLAY-PEERS
+ neighbor 10.102.202.202 peer-group IPv4-UNDERLAY-PEERS
+ redistribute connected route-map RM-CONN-2-BGP
+ !
+ address-family ipv4
+ neighbor IPv4-UNDERLAY-PEERS activate
+ neighbor MLAG-IPv4-UNDERLAY-PEER activate
+
+
+
+
+##################################
+## leaf2-a ##
+##################################
+
+
+
+hostname a-leaf2-a
+
+int ma1
+ip addr 192.168.86.203
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.102.201.102/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.101.202.101/24
+
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.102/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 2.2.2.1/32
+
+
+vlan 4093
+name mlag-ibgp-peering
+!
+interface vlan4093
+description mlag-ibgp-peering
+ip address 192.0.0.2/24
+
+vlan 4094
+name l2-mlag-peer 
+
+interface vlan4094
+description l3-mlag-peer
+ip address 10.0.0.1/30
+
+router bgp 65102
+   router-id 1.1.1.102
+
+
+
+
+##################################
+## leaf2b ##
+##################################
+
+
+
+hostname a-leaf2-b
+
+int ma1
+ip addr 192.168.86.204
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.103.201.103/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.103.202.103/24
+
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.103/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 2.2.2.2/32
+
+
+vlan 4093
+name mlag-ibgp-peering
+!
+interface vlan4093
+description mlag-ibgp-peering
+ip address 192.0.0.3/24
+
+vlan 4094
+name l2-mlag-peer 
+
+interface vlan4094
+description l3-mlag-peer
+ip address 10.0.0.2/30
+
+router bgp 65102
+   router-id 10.0.2.2
+
+
+##################################
+## a-svca1a ##
+##################################
+
+
+
+hostname a-svca1-a
+
+int ma1
+ip addr 192.168.86.205
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.104.201.104/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.104.202.104/24
+
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.104/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 2.2.2.3/32
+
+
+vlan 4093
+name mlag-ibgp-peering
+!
+interface vlan4093
+description mlag-ibgp-peering
+ip address 192.0.0.4/24
+
+vlan 4094
+name l2-mlag-peer 
+
+interface vlan4094
+description l3-mlag-peer
+ip address 10.0.0.1/30
+
+router bgp 65103
+   router-id 10.0.2.3
+
+
+##################################
+## a-svca1b ##
+##################################
+
+
+hostname a-svca1-b
+
+int ma1
+ip addr 192.168.86.206
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.105.201.105/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.105.202.105/24
+
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.105/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 2.2.2.3/32
+
+
+vlan 4093
+name mlag-ibgp-peering
+!
+interface vlan4093
+description mlag-ibgp-peering
+ip address 192.0.0.5/24
+
+vlan 4094
+name l2-mlag-peer 
+
+interface vlan4094
+description l3-mlag-peer
+ip address 10.0.0.2/30
+
+router bgp 65104
+   router-id 10.0.2.5
+
+
+##################################
+## A-BL1A ##
+##################################
+
+hostname a-bl1-a
+
+int ma1
+ip addr 192.168.86.207
+username arista priv 15 secret 0 
+
+
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.106.201.106/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.106.202.106/24
+
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.106/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 2.2.2.4/32
+
+
+vlan 4093
+name mlag-ibgp-peering
+!
+interface vlan4093
+description mlag-ibgp-peering
+ip address 192.0.0.5/24
+
+vlan 4094
+name l2-mlag-peer 
+
+interface vlan4094
+description l3-mlag-peer
+ip address 10.0.0.1/30
+
+router bgp 65104
+   router-id 10.0.2.5
+
+
+
+##################################
+## A-BL1B ##
+##################################
+
+hostname a-bl1-a
+
+int ma1
+ip addr 192.168.86.208
+username arista priv 15 secret 0 
+
+ip routing
+service routing protocols model multi-agent
+
+interface Ethernet1
+   no switchport
+   mtu 9214
+   ip address 10.107.201.107/24
+interface Ethernet2
+   no switchport
+   mtu 9214
+   ip address 10.107.202.107/24
+
+
+interface Loopback0
+description evpn-peering
+   ip address 1.1.1.107/32
+
+interface Loopback1
+description vxlan-tunnel-source
+   ip address 2.2.2.4/32
+
+
+vlan 4093
+name mlag-ibgp-peering
+!
+interface vlan4093
+description mlag-ibgp-peering
+ip address 192.0.0.5/24
+
+vlan 4094
+name l2-mlag-peer 
+
+interface vlan4094
+description l3-mlag-peer
+ip address 10.0.0.2/30
+
+router bgp 65104
+   router-id 10.0.2.5
