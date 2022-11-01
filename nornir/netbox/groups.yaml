@@ -3,9 +3,9 @@
 
 
 arista:
-  #platform: eos
-  #username: "arista"
-  #password: "arista"
+  platform: arista_eos
+  username: "arista"
+  password: "arista"
   connection_options:
     scrapli:
       port: 22

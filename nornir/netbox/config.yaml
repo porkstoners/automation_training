@@ -1,11 +1,12 @@
 ---
 
 inventory:
-    plugin: SimpleInventory
+    plugin: NetBoxInventory2
     options:
-        host_file: "hosts.yaml"
-        group_file: "groups.yaml"
-        defaults_file: "defaults.yaml"
+        nb_url: http://127.0.0.1:8000
+        nb_token: "0123456789abcdef0123456789abcdef01234567"
+        filter_parameters:
+            tag: ["spine-switch"]
 
 
 runner:
