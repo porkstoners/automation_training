@@ -9,9 +9,7 @@ nr = InitNornir(
         "options": {
             "nb_url": "http://127.0.0.1:8000",
             "nb_token": "0123456789abcdef0123456789abcdef01234567",
-            "filter_parameters": {
-                "name": ["spine-sw-01","spine-sw-02"]
-            }
+            "ssl_verify": False
         }
     }
 )

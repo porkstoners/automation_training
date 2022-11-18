@@ -1,0 +1,568 @@
+#######################################
+## lon1 ##
+#######################################
+
+
+conf t
+
+hostname lon-core-rtr1
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.200/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.1.1/32
+
+router bgp 65000
+router-id 1.1.1.1
+
+
+end
+wr
+
+
+
+
+
+
+
+
+#######################################
+## lon2 ##
+#######################################
+
+
+conf t
+
+hostname lon-core-rtr2
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.201/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.1.2/32
+
+
+router bgp 65001
+router-id 1.1.1.2
+
+
+end
+wr
+
+
+
+#######################################
+## lon3 ##
+#######################################
+
+
+conf t
+
+hostname nyc-core-rtr3
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.202/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.1.3/32
+
+
+router bgp 65002
+router-id 1.1.1.3
+
+
+end
+wr
+
+
+
+#######################################
+## lon4 ##
+#######################################
+
+
+conf t
+
+hostname nyc-core-rtr4
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.203/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.1.4/32
+
+
+router bgp 65003
+router-id 1.1.1.4
+
+
+end
+wr
+
+
+
+
+#######################################
+## Par1 ##
+#######################################
+
+
+conf t
+
+hostname par-core-rtr1
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.204/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.2.1/32
+
+
+router bgp 65010
+router-id 1.1.2.1
+
+
+end
+wr
+
+
+
+#######################################
+## Par2 ##
+#######################################
+
+
+conf t
+
+hostname par-core-rtr2
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.205/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.2.2/32
+
+
+router bgp 65011
+router-id 1.1.2.2
+
+
+end
+wr
+
+
+
+#######################################
+## Par3 ##
+#######################################
+
+
+conf t
+
+hostname par-core-rtr3
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.206/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.2.3/32
+
+
+router bgp 65012
+router-id 1.1.2.3
+
+
+end
+wr
+
+
+
+#######################################
+## Par4 ##
+#######################################
+
+
+conf t
+
+hostname par-core-rtr4
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.207/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.2.4/32
+
+
+router bgp 65023
+router-id 1.1.2.4
+
+
+end
+wr
+
+
+
+#######################################
+## Nyc1 ##
+#######################################
+
+
+conf t
+
+hostname nyc-core-rtr1
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.208/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.3.1/32
+
+
+router bgp 65020
+router-id 1.1.3.1
+
+
+end
+wr
+
+
+
+#######################################
+## Nyc2 ##
+#######################################
+
+
+conf t
+
+hostname nyc-core-rtr2
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.209/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.3.2/32
+
+
+router bgp 65021
+router-id 1.1.3.2
+
+
+end
+wr
+
+
+
+#######################################
+## Nyc3 ##
+#######################################
+
+
+conf t
+
+hostname nyc-core-rtr3
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.210/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.3.3/32
+
+
+router bgp 65022
+router-id 1.1.3.3
+
+
+end
+wr
+
+
+
+
+#######################################
+## Nyc4 ##
+#######################################
+
+
+conf t
+
+hostname nyc-core-rtr4
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.211/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.3.4/32
+
+
+router bgp 65023
+router-id 1.1.3.4
+
+
+end
+wr
+
+
+
+#######################################
+## Tok1 ##
+#######################################
+
+
+conf t
+
+hostname tok-core-rtr1
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.212/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.4.1/32
+
+
+router bgp 65030
+router-id 1.1.4.1
+
+
+end
+wr
+
+
+
+#######################################
+## Tok2 ##
+#######################################
+
+
+conf t
+
+hostname tok-core-rtr2
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.213/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.4.2/32
+
+
+router bgp 65031
+router-id 1.1.4.2
+
+
+end
+wr
+
+
+
+#######################################
+## Tok3 ##
+#######################################
+
+
+conf t
+
+hostname tok-core-rtr3
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.214/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.4.3/32
+
+
+router bgp 65032
+router-id 1.1.4.3
+
+
+end
+wr
+
+
+
+#######################################
+## Tok4 ##
+#######################################
+
+
+conf t
+
+hostname tok-core-rtr4
+
+ip routing
+
+username arista priv 15 secret 0 arista
+
+int ma1
+ip address 192.168.86.215/24
+
+ip route 0.0.0.0/0 192.168.86.1
+
+logging trap debugging
+logging host 192.168.86.38 5140
+logging source-interface Management1
+
+int lo0
+ip address 1.1.4.4/32
+
+
+router bgp 65033
+router-id 1.1.4.4
+
+
+end
+wr
+
+
+
+
+

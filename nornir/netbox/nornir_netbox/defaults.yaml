@@ -1,0 +1,5 @@
+---
+
+  platform: eos
+  username: "arista"
+  password: "arista"
