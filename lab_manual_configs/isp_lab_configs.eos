@@ -5,6 +5,9 @@
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname lon-core-rtr1
 
 ip routing
@@ -44,6 +47,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname lon-core-rtr2
 
 ip routing
@@ -79,6 +85,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname nyc-core-rtr3
 
 ip routing
@@ -113,6 +122,9 @@ wr
 
 
 conf t
+
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
 
 hostname nyc-core-rtr4
 
@@ -150,6 +162,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname par-core-rtr1
 
 ip routing
@@ -184,6 +199,9 @@ wr
 
 
 conf t
+
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
 
 hostname par-core-rtr2
 
@@ -220,6 +238,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname par-core-rtr3
 
 ip routing
@@ -254,6 +275,9 @@ wr
 
 
 conf t
+
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
 
 hostname par-core-rtr4
 
@@ -290,6 +314,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname nyc-core-rtr1
 
 ip routing
@@ -325,6 +352,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname nyc-core-rtr2
 
 ip routing
@@ -359,6 +389,9 @@ wr
 
 
 conf t
+
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
 
 hostname nyc-core-rtr3
 
@@ -396,6 +429,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname nyc-core-rtr4
 
 ip routing
@@ -430,6 +466,9 @@ wr
 
 
 conf t
+
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
 
 hostname tok-core-rtr1
 
@@ -466,6 +505,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname tok-core-rtr2
 
 ip routing
@@ -501,6 +543,9 @@ wr
 
 conf t
 
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
+
 hostname tok-core-rtr3
 
 ip routing
@@ -535,6 +580,9 @@ wr
 
 
 conf t
+
+! Time and date need to be set in order for graylog to work
+clock set {hh:mm:ss} {mm/dd/yyyy} gmt 
 
 hostname tok-core-rtr4
 

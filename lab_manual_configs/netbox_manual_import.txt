@@ -1,16 +1,35 @@
 address,status,device,interface,is_primary
-192.168.86.201,active,lon-core-sw2,Management1,true
-192.168.86.202,active,lon-core-sw3,Management1,true
-192.168.86.203,active,lon-core-sw4,Management1,true
-192.168.86.204,active,par-core-sw1,Management1,true
-192.168.86.205,active,par-core-sw2,Management1,true
-192.168.86.206,active,par-core-sw3,Management1,true
-192.168.86.207,active,par-core-sw4,Management1,true
-192.168.86.208,active,nyc-core-sw1,Management1,true
-192.168.86.209,active,nyc-core-sw2,Management1,true
-192.168.86.210,active,nyc-core-sw3,Management1,true
-192.168.86.211,active,nyc-core-sw4,Management1,true
-192.168.86.212,active,tok-core-sw1,Management1,true
-192.168.86.213,active,tok-core-sw2,Management1,true
-192.168.86.214,active,tok-core-sw3,Management1,true
-192.168.86.215,active,tok-core-sw4,Management1,true
+192.168.86.200/24,active,lon-core-sw1,Management1,true
+192.168.86.201/24,active,lon-core-sw2,Management1,true
+192.168.86.202/24,active,lon-core-sw3,Management1,true
+192.168.86.203/24,active,lon-core-sw4,Management1,true
+192.168.86.204/24,active,par-core-sw1,Management1,true
+192.168.86.205/24,active,par-core-sw2,Management1,true
+192.168.86.206/24,active,par-core-sw3,Management1,true
+192.168.86.207/24,active,par-core-sw4,Management1,true
+192.168.86.208/24,active,nyc-core-sw1,Management1,true
+192.168.86.209/24,active,nyc-core-sw2,Management1,true
+192.168.86.210/24,active,nyc-core-sw3,Management1,true
+192.168.86.211/24,active,nyc-core-sw4,Management1,true
+192.168.86.212/24,active,tok-core-sw1,Management1,true
+192.168.86.213/24,active,tok-core-sw2,Management1,true
+192.168.86.214/24,active,tok-core-sw3,Management1,true
+192.168.86.215/24,active,tok-core-sw4,Management1,true
+
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.200"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.201"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.202"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.203"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.204"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.205"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.206"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.207"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.208"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.209"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
+ssh-keygen -f "/home/doug/.ssh/known_hosts" -R "192.168.86.20"
